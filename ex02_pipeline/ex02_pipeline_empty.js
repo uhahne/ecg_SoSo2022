@@ -6,7 +6,7 @@
  * @author Uwe Hahne, uwe.hahne (ät) hs-furtwangen.de
  *
  * Created at     : 2021-11-03 15:28:31 
- * Last modified  : 2021-11-04 12:05:44
+ * Last modified  : 2022-02-28 16:57:49
  */
 
 
@@ -48,43 +48,20 @@ function main() {
             
     `;
 
-    /*====== Create shaders ======*/
-    const vertexShader = gl.createShader(gl.VERTEX_SHADER);
-    const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
-    gl.shaderSource(vertexShader, vsSource);
-    gl.shaderSource(fragmentShader, fsSource);
-    
-    /*====== Compile shaders ======*/
-    gl.compileShader(vertexShader);
-    if (!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)) {
-        alert('An error occurred compiling the vertex shader: ' + gl.getShaderInfoLog(vertexShader));
-        gl.deleteShader(vertexShader);
-        return null;
-    }
-    else {
-        console.log('Vertex shader successfully compiled.');
-    }
-    gl.compileShader(fragmentShader);
-    if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
-        alert('An error occurred compiling the fragment shader: ' + gl.getShaderInfoLog(fragmentShader));
-        gl.deleteShader(fragmentShader);
-        return null;
-    }
-    else {
-        console.log('Fragment shader successfully compiled.');
-    }
+    /* TODO ====== Create shaders ======*/
 
-    /*====== Create shader program ======*/
-    
+    /* TODO ====== Compile shaders ======*/
 
-    /*====== Link shader program ======*/
-    
-
+    /* TODO ====== Create and link shader programs ======*/
 
     /*========== Connect the attributes with the vertex shader ===================*/        
     
     /*========== Connect the uniforms with the vertex shader ===================*/
-    
+
+        // define projection matrix
+
+        // define modelview matrix
+
     /*========== Drawing ======================== */
-    
+
 } // be sure to close the main function with a curly brace.

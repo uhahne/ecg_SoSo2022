@@ -6,7 +6,7 @@
  * @author Uwe Hahne, uwe.hahne (ät) hs-furtwangen.de
  *
  * Created at     : 2021-11-03 15:30:54 
- * Last modified  : 2021-11-04 12:05:44
+ * Last modified  : 2022-02-28 16:56:57
  */
 
 
@@ -119,12 +119,11 @@ function main() {
         console.log('Fragment shader successfully compiled.');
     }
 
-    /*====== Create shader program ======*/
+    /*====== Create and link shader programs ======*/
     const program = gl.createProgram();
     gl.attachShader(program, vertexShader);
     gl.attachShader(program, fragmentShader);
 
-    /*====== Link shader program ======*/
     gl.linkProgram(program);
     gl.useProgram(program);
 
@@ -142,6 +141,7 @@ function main() {
 
     /*========== Connect the uniforms with the vertex shader ===================*/
     const projMatrixLocation = gl.getUniformLocation(program, 'uProjectionMatrix');
+    // define projection matrix
     const projectionMatrix = mat4.create();
     const fieldOfView = 45 * Math.PI / 180; // in radians
     const aspect = gl.canvas.clientWidth / gl.canvas.clientHeight;
@@ -157,6 +157,7 @@ function main() {
     gl.uniformMatrix4fv(projMatrixLocation, false, projectionMatrix);
 
     const modelMatrixLocation = gl.getUniformLocation(program, 'uModelViewMatrix');
+    // define modelview matrix
     const modelViewMatrix = mat4.create();
     mat4.rotate(modelViewMatrix, // destination matrix
         modelViewMatrix, // matrix to rotate
