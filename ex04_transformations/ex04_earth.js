@@ -2,7 +2,7 @@
  * Example Code #04 for ECG course
  * Render some objects including their coordinate systems with THREE.js
  * 
- * Needs THREE.js installed with npm
+ * Needs THREE.js installed with npm (see https://threejs.org/docs/index.html#manual/en/introduction/Installation)
  * Code inspired and copied in parts from: "AR and VR Using the WebXR API", Rakesh Baruah (Book)
  * Earth textures from Computer Graphics course at TU Berlin (Prof. M. Alexa)
  * 
@@ -12,7 +12,7 @@
  * @author Uwe Hahne, uwe.hahne (ät) hs-furtwangen.de
  *
  * Created at     : 2021-11-03 15:34:32 
- * Last modified  : 2021-11-04 12:05:13
+ * Last modified  : 2022-03-09 17:13:21
  */
 
 
