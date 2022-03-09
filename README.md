@@ -16,3 +16,15 @@ Repository for course "Echtzeit-Computergrafik" in summer term 2022 at HS Furtwa
   - [Empty code we started with](/ex01/index_empty.html)
   - [Final code](/ex01/index.html)
 
+
+## Things we need later
+### HTTPS
+- See [this article](https://medium.com/webisora/how-to-enable-https-on-live-server-visual-studio-code-5659fbc5542c) on how to enable _https_ for the Visual Studio Code LiveServer extension. Some details from this article are the following:
+- Alternatively follow these instructions
+  -   Install mkcert: <https://github.com/FiloSottile/mkcert>
+  -   Obtain a local certificate: `mkcert -install && mkcert -key-file snowpack.key -cert-file snowpack.crt localhost`
+  -   Run `npm run start-secure`
+  -   Go to <https://localhost:8080/ar.html>
+- Or [these](https://medium.com/@jonsamp/how-to-set-up-https-on-localhost-for-macos-b597bcf935ee)
+
+
