@@ -1,3 +1,4 @@
+<!-- This file is used for the live development in class -->
 <!-- Created with ! shortcut in VS Code -->
 <!DOCTYPE html>
 <html lang="en">
@@ -7,13 +8,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECG Excercise 1: Hello WebGL World!</title>
     <!-- TODO CSS Style defines the size of the canvas -->
+    <style>
+        canvas {
+            width: 100vw;
+            height: 100vh;
+            display: block;
+        }
+    </style>
 
 </head>
 <body>
     <!-- TODO add canvas html element -->
-    
+    <canvas id="canvas"></canvas>
     <!-- TODO Vertex shader code -->
-    
+    <script id="vertex-data" type="not-javascript">
+        attribute vec4 vertex_points;
+
+        void main() {
+            gl_Position = vertex_points;
+        }
+    </script>
 
     <!-- TODO Fragment shader code -->
 
@@ -24,26 +38,47 @@
             /* TODO ========== Initialize and check WebGL support ==========*/
             
             /** @type {HTMLCanvasElement} */
-            
+            const canvas = document.querySelector("#canvas");
+            if (!canvas) {
+                console.error('no canvas found.');
+            }
 
             /** @type {WebGLRenderingContext} */
-            
+            const gl = canvas.getContext('webgl');
+            if (!gl) {
+                console.error('Missing webgl support.');
+            }
+            else {
+                console.log('We have WebGL support, yeah!');
+                console.log(gl.drawingBufferWidth);
+                console.log(gl.drawingBufferHeight);
+                console.log(gl);
+            }
            
             /* TODO ========== Define and Store the Geometry ==========*/
 
             // Define the points in the scene
-            
+            const coordinates = [
+                -0.7, 0.7,
+                -0.7, 0.0,
+                0.7, 0.0
+            ];
 
             // Create an empty buffer object to store the vertex points 
-            
+            const pointBuffer = gl.createBuffer();
+
             // Connect the empty buffer object to the GL context
-            
+            gl.bindBuffer(gl.ARRAY_BUFFER, pointBuffer);
+
             // Load the vertices into the GL's connected buffer
-            
+            gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(coordinates), gl.STATIC_DRAW);
+
             /* TODO ========== Shaders ==========*/
 
             // Create a variable to store the data for our vertex shader
-            
+            const vsSource = document.querySelector("#vertex-data").text;
+            // XXX That's the last entry from the first session on March 15th
+
             // Create a variable to store the data from our fragment shader
 
             // Compile the shaders into GLSL
