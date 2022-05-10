@@ -26,5 +26,13 @@ Repository for course "Echtzeit-Computergrafik" in summer term 2022 at HS Furtwa
   -   Run `npm run start-secure`
   -   Go to <https://localhost:8080/ar.html>
 - Or [these](https://medium.com/@jonsamp/how-to-set-up-https-on-localhost-for-macos-b597bcf935ee)
+ 
+### VR Emulator
+- Check out [this website](https://github.com/MozillaReality/WebXR-emulator-extension) in order to find a browser plugin that allows the emulation of a VR headset and controllers in WebXR applications.
+
+
+### THREE.js
+- In order to run [example #4](./ex04_transformations/), it is necessary to install [THREE.js](https://threejs.org/docs/index.html#manual/en/introduction/Installation) locally.
+  - `npm install --save three` does the job.
 
 
