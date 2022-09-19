@@ -1,7 +1,7 @@
-# ecg_SoSe2022
-Repository for course "Echtzeit-Computergrafik" in summer term 2022 at HS Furtwangen University. 
+# ecg_WiSe2022
+Repository for course "Echtzeit-Computergrafik" in winter term 2022 at HS Furtwangen University. 
 
-## First meeting on 15.03.2022
+## First meeting on 11.10.2022
 - Setup development environment
   - [Visual Studio Code](https://code.visualstudio.com/) with [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
   - Browser with WebGL support
